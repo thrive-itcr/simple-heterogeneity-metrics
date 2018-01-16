@@ -1,7 +1,7 @@
 {
-    "name" : "HeterogeneityMetrics",
+    "name" : "heterogeneity-metrics",
     "version" : "v1_0_0",
-    "queue" : "HeterogeneityMetrics--v1_0_0",
+    "queue" : "heterogeneity-metrics--v1_0_0",
     "parameters" : {
         "slide" : {
             "label" : "Slide Name",
