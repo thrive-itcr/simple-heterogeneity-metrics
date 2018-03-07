@@ -23,9 +23,8 @@ def metricsForCSV(path, feat_ind):
     metric = 'QE'
 
     xy, feat = structureData(path, xy_ind, feat_ind, log_flag)
-    # BDS - modified the call below not to return colors.
-    heat = diversityHeatmap(xy, feat, maxRange, nSpecies, simMat, metric)
-    diversity2csv(path, heat)
+    heat, colors = diversityHeatmap(xy, feat, maxRange, nSpecies, simMat, metric)
+    diversity2csv(path, heat, colors)
 
 
 if __name__ == '__main__':

@@ -2,13 +2,11 @@ import numpy as np
 from scipy.spatial.distance import pdist, squareform
 from scipy.cluster.vq import kmeans2
 from quantifyDiversity import *
-#import matplotlib.pyplot as plot
+import matplotlib.pyplot as plot
 
-# BDS:  Commented out requirements on matplotlib for initial deployment.
-#       Maybe base algorithm SDK on an Anaconda image?
-#def getColors(vals,colormap,vmin=None,vmax=None):
-#	norm = plot.Normalize(vmin,vmax)
-#	return colormap(norm(vals))
+def getColors(vals,colormap,vmin=None,vmax=None):
+	norm = plot.Normalize(vmin,vmax)
+	return colormap(norm(vals))
 
 def diversityHeatmap(xy,feats,maxRange=200,nSpecies=4,simMat='default',metric='QE'):
 	'''
@@ -47,7 +45,7 @@ def diversityHeatmap(xy,feats,maxRange=200,nSpecies=4,simMat='default',metric='Q
 		heat[cell] = diversity
 
 	# convert diversity metric vector to color (3D) vector
-	#colors = getColors(heat, plot.cm.jet)
+	colors = getColors(heat, plot.cm.jet)
 
 
-	return heat
+	return heat, colors

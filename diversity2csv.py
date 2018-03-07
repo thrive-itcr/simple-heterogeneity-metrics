@@ -8,9 +8,9 @@ def diversity2csv(fin,heat,colors=None):
 	output: none, writes an file as fout
 	'''
 
-	# Handle no color input
-	if colors == None:
-		colors = np.zeros((np.size(heat),3))
+	# Handle no color input.  TODO:  The test below does not work if colors is not None.
+	#if colors == None:
+	#	colors = np.zeros((np.size(heat),3))
 
 
 	# Package together heat and colors
