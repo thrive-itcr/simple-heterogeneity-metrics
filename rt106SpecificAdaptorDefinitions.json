@@ -27,13 +27,20 @@
             "type" : "boolean",
             "default" : false
         },
-        "featureIndex" : {
-            "label" : "Feature Index",
-            "description" : "Column number (starting from 0) for diversit calculation",
-            "type" : "number",
-            "default" : 3
+        "biomarker" : {
+            "label" : "Biomarker",
+            "description" : "Select a specific biomarker",
+            "type" : "biomarker",
+            "default" : ""
         },
-        "required" : ["slide", "region", "branch", "force", "featureIndex"]
+        "metric" : {
+            "label" : "Metric Type",
+            "description" : "Choice between quadratic entropy, Shannon, and Simpson",
+            "type" : "enumeration",
+            "choices" : ["QE", "Shannon", "Simpson"],
+            "default" : "QE"
+        },
+        "required" : ["slide", "region", "branch", "force", "biomarker", "metric"]
     },
     "results" : {
      	"nuclearImage" : {

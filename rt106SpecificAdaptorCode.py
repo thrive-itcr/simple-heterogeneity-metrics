@@ -36,7 +36,7 @@ def run_algorithm(datastore,context):
 
     # 2.    Code for calling algorithm.
     try:
-        run_algorithm = '/usr/bin/python main.py /rt106/input/%s %s' % (quan_csv, context['featureIndex'])
+        run_algorithm = '/usr/bin/python main.py /rt106/input/%s %s' % (quan_csv, context['biomarker'])
         logging.info('run Algorithm: %r' % run_algorithm)
         subprocess.check_call(run_algorithm,shell=True)
     except subprocess.CalledProcessError, e:
