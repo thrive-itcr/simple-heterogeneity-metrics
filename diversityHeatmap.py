@@ -46,6 +46,8 @@ def diversityHeatmap(xy,feats,maxRange=200,nSpecies=4,simMat='default',metric='Q
 
 	# convert diversity metric vector to color (3D) vector
 	colors = getColors(heat, plot.cm.jet)
+	#print('diversityHeatmap, colors:')
+	#print(colors)
 
 
 	return heat, colors

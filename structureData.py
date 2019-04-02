@@ -8,6 +8,7 @@ def listdir_nohidden(path):
 			yield f
 
 def structureData(path,xy_ind=1,feat_ind=5,log_flag='1'):
+	#print('structureData( ' + path + ', ' + str(xy_ind) + ', ' + str(feat_ind) + ', ' + str(log_flag) + ' )'   )
 	'''
 	inputs: string containing location and name of csv file(s)
 	options: give xy start index, feature index, log flag

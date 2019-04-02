@@ -3,6 +3,18 @@
     "version" : "v1_0_0",
     "queue" : "simple-heterogeneity-metrics--v1_0_0",
     "parameters" : {
+        "all_markers" : {
+            "label" : "All Markers",
+            "description" : "Whether to process all markers or a single selected one.",
+            "type" : "boolean",
+            "default" : true
+        },
+        "all_metrics" : {
+            "label" : "All Metrics",
+            "description" : "Whether to calculate all metrics or a single selected one.",
+            "type" : "boolean",
+            "default" : true
+        },
         "slide" : {
             "label" : "Slide Name",
             "description" : "The slide being analyzed.",
@@ -40,7 +52,31 @@
             "choices" : ["QE", "Shannon", "Simpson"],
             "default" : "QE"
         },
-        "required" : ["slide", "region", "branch", "force", "biomarker", "metric"]
+        "log_flag" : {
+            "label" : "Log Flag",
+            "description" : "Whether to perform a log transform",
+            "type" : "boolean",
+            "default" : false
+        },
+        "maxRange" : {
+            "label" : "Max Range",
+            "description" : "Distance from each cell to examine for diversity",
+            "type" : "number",
+            "default" : 200
+        },
+        "numberSpecies" : {
+            "label" : "Number of Species",
+            "description" : "Number of different species / clusters / categories of cells",
+            "type" : "number",
+            "default" : 4
+        },
+        "identity_matrix" : {
+            "label" : "Identity Matrix",
+            "description" : "Whether to use the identity matrix rather than the default matrix",
+            "type" : "boolean",
+            "default" : false
+        },
+        "required" : ["all_markers", "all_metrics", "slide", "region", "branch", "force", "biomarker", "metric", "log_flag", "maxRange", "numberSpecies", "identity_matrix"]
     },
     "results" : {
      	"nuclearImage" : {
