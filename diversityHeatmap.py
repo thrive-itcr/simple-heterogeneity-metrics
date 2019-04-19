@@ -41,7 +41,7 @@ def diversityHeatmap(xy,feats,maxRange=200,nSpecies=4,simMat='default',metric='Q
 		lab_r = label[Ir]
 
 		# Calculate diversity metric and save
-		diversity = quantifyDiversity(lab_r,'default','QE')
+		diversity = quantifyDiversity(lab_r,'default',metric)
 		heat[cell] = diversity
 
 	# convert diversity metric vector to color (3D) vector
