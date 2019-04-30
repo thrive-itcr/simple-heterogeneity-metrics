@@ -3,18 +3,6 @@
     "version" : "v1_0_0",
     "queue" : "simple-heterogeneity-metrics--v1_0_0",
     "parameters" : {
-        "all_markers" : {
-            "label" : "All Markers",
-            "description" : "Whether to process all markers or a single selected one.",
-            "type" : "boolean",
-            "default" : true
-        },
-        "all_metrics" : {
-            "label" : "All Metrics",
-            "description" : "Whether to calculate all metrics or a single selected one.",
-            "type" : "boolean",
-            "default" : true
-        },
         "slide" : {
             "label" : "Slide Name",
             "description" : "The slide being analyzed.",
@@ -38,12 +26,6 @@
             "description" : "Whether to force an overwrite",
             "type" : "boolean",
             "default" : false
-        },
-        "biomarker" : {
-            "label" : "Biomarker",
-            "description" : "Select a specific biomarker",
-            "type" : "biomarker",
-            "default" : ""
         },
         "metric" : {
             "label" : "Metric Type",
@@ -76,7 +58,7 @@
             "type" : "boolean",
             "default" : false
         },
-        "required" : ["all_markers", "all_metrics", "slide", "region", "branch", "force", "biomarker", "metric", "log_flag", "maxRange", "numberSpecies", "identity_matrix"]
+        "required" : ["slide", "region", "branch", "force", "metric", "log_flag", "maxRange", "numberSpecies", "identity_matrix"]
     },
     "results" : {
      	"nuclearImage" : {

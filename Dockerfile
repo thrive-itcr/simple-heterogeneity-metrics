@@ -7,7 +7,7 @@ USER root
 RUN  apt-get -y update \
      && apt-get -y install python-dev python-tk libgtk2.0-0 gcc libxft-dev libfreetype6 libfreetype6-dev \
      && pip install opencv-python \
-     && pip install numpy scipy matplotlib
+     && pip install numpy scipy matplotlib mysql-connector
 
 ADD *.py    /rt106/
 ADD rt106SpecificAdaptorDefinitions.json /rt106/rt106SpecificAdaptorDefinitions.json

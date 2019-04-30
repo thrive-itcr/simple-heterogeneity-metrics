@@ -35,9 +35,6 @@ def run_algorithm(datastore,context):
     output_file = '/rt106/input/%s' % het_csv
 
     # 2.    Code for calling algorithm.
-    all_markers_var = context['all_markers']
-    all_metrics_var = context['all_metrics']
-    biomarker_var = context['biomarker']
     log_flag_var = context['log_flag']
     maxRange_var = context['maxRange']
     numberSpecies_var = context['numberSpecies']
@@ -47,7 +44,7 @@ def run_algorithm(datastore,context):
         status = "ERROR_BAD_METRIC_TYPE"
         return { 'result' : {}, 'status' : status}
     try:
-        run_algorithm = '/usr/bin/python main.py /rt106/input/%s %s %s %s %s %s %s %s %s' % (quan_csv, biomarker_var, log_flag_var, maxRange_var, numberSpecies_var, identity_matrix_var, metric_var, all_markers_var, all_metrics_var)
+        run_algorithm = '/usr/bin/python main.py /rt106/input/%s %s %s %s %s %s %s %s %s' % (quan_csv, log_flag_var, maxRange_var, numberSpecies_var, identity_matrix_var, metric_var, context['slide'], context['region'], context['branch'])
         logging.info('run Algorithm: %r' % run_algorithm)
         subprocess.check_call(run_algorithm,shell=True)
     except subprocess.CalledProcessError, e:
